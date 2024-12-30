@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator črtnih kod</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Vnesi številko naloga:</h1>
+
+    <!-- Number Input Field -->
+    <div class="input-group">
+        
+        <input type="text" id="number" oninput="updateBarcode()">
+    </div>
+
+    <!-- Label Preview -->
+    <div id="label-preview-container">
+        <div id="label-preview">
+            <div id="text1-preview">Mobistekla servis</div>
+            <svg id="barcode"></svg>
+            <div id="text2-preview">www.mobistekla.si</div>
+        </div>
+    </div>
+
+    <!-- Print Button -->
+	<button class="print-button" onclick="printLabel()">Natisni nalepko</button>
+
+<!-- Next Number Button -->
+	<button class="next-button" onclick="printNextNumber()">Natisni naslednjo nalepko</button>
+
+
+
+    <script src="JsBarcode.all.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
